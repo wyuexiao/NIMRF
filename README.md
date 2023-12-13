@@ -6,7 +6,7 @@ Predicting patient mortality risk facilitates early intervention in intensive ca
 
 
 ## Citation
-Please be sure to cite the original [MIMIC-III paper](http://www.nature.com/articles/sdata201635).**
+Please be sure to cite the original [MIMIC-III paper](http://www.nature.com/articles/sdata201635).
 
 
 ## Requirements
