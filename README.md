@@ -15,7 +15,7 @@ We do not provide the MIMIC-III data itself. You must acquire the data yourself 
 - numpy
 - pandas
 
-LSTM models use [Keras](https://keras.io/).
+- LSTM models use [Keras](https://keras.io/).
 
 
 ## Creating the model datasets
