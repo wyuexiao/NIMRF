@@ -23,7 +23,7 @@ Here are the required steps to create the model datasets. It assumes that you al
 
 1. Clone the repo.
 
-       git clone https://github.com/yyy/NIMRF/（工程路径）
+       git clone git@github.com:wyuexiao/NIMRF.git
        cd NIMRF/
     
 2. Take MIMIC-III CSVs, generate one directory per `SUBJECT_ID` and write ICU stay information to `data/{SUBJECT_ID}/stays.csv`, diagnoses to `data/{SUBJECT_ID}/diagnoses.csv`, and events to `data/{SUBJECT_ID}/events.csv`.
@@ -44,41 +44,59 @@ Here are the required steps to create the model datasets. It assumes that you al
 	
 6. Generate the dataset which can later be used in NIMRF. These commands are independent, if you are going to work only on one benchmark task, you can run only the corresponding command.
 
-       Generate the dataset that can be used in the NIMRF model to predict a patient's risk of death within 1 hour:
-		python -m mimic3benchmark.scripts.create_mortality_somehours data/root/ data/mortality/1h/ 1
-		
-	   Generate the dataset that can be used in the NIMRF model to predict a patient's risk of death within 1~3 hours:
-		python -m mimic3benchmark.scripts.create_mortality_somehours data/root/ data/mortality/3h/ 3
-		
-	   Generate the dataset that can be used in the NIMRF model to predict a patient's risk of death within 3~6 hours:
-		python -m mimic3benchmark.scripts.create_mortality_somehours data/root/ data/mortality/6h/ 6
-		
-	   Generate the dataset that can be used in the NIMRF model to predict a patient's risk of death within 6~12 hours:
-		python -m mimic3benchmark.scripts.create_mortality_somehours data/root/ data/mortality/12h/ 12
+	Generate the dataset that can be used in the NIMRF model to predict a patient's risk of death within 1 hour:
+	```bash
+	python -m mimic3benchmark.scripts.create_mortality_somehours data/root/ data/mortality/1h/ 1
+	```
+
+	Generate the dataset that can be used in the NIMRF model to predict a patient's risk of death within 1~3 hours:
+	```bash
+	python -m mimic3benchmark.scripts.create_mortality_somehours data/root/ data/mortality/3h/ 3
+	```
+
+	Generate the dataset that can be used in the NIMRF model to predict a patient's risk of death within 3~6 hours:
+	```bash
+	python -m mimic3benchmark.scripts.create_mortality_somehours data/root/ data/mortality/6h/ 6
+	```
+
+	Generate the dataset that can be used in the NIMRF model to predict a patient's risk of death within 6~12 hours:
+	```bash
+	python -m mimic3benchmark.scripts.create_mortality_somehours data/root/ data/mortality/12h/ 12
+	```
 
 
 ## Train / validation splitting
 Extract validation set from the training set. This step is required for running the models.
-
-       python -m mimic3models.split_train_val {dataset-directory}
+```
+python -m mimic3models.split_train_val {dataset-directory}
+```     
        
 `{dataset-directory}` can be either `data/mortality/1h`, `data/mortality/3h`, `data/mortality/6h` or `data/mortality/12h`.
 
 
 ## Training and testing
-Memory module training.
-       python -um mimic3models.mortality.main --network mimic3models/keras_models/lstm.py --dim 16 --timestep 1.0 --depth 2 --dropout 0.3 --mode train --batch_size 8 --output_dir mimic3models/mortality
+Memory module training:
+```bash
+python -um mimic3models.mortality.main --network mimic3models/keras_models/lstm.py --dim 16 --timestep 1.0 --depth 2 --dropout 0.3 --mode train --batch_size 8 --output_dir mimic3models/mortality
+```
+
 	   
-Memory module testing.
-	   python -um mimic3models.mortality.main --network mimic3models/keras_models/lstm.py --dim 16 --timestep 1.0 --depth 2 --dropout 0.3 --mode test --batch_size 1 --normalizer_state mimic3models/mortality/ihm_ts1.0.input_str_previous.start_time_zero.normalizer --load_state {model-directory} --data {test dataset-directory}
-
-Random forest module training.
-	   python -um mimic3models.mortality.train_mortality
-
-Random forest module testing and Interpretation.
-	   python -um mimic3models.mortality.run_mortality
+Memory module testing:
+```bash
+python -um mimic3models.mortality.main --network mimic3models/keras_models/lstm.py --dim 16 --timestep 1.0 --depth 2 --dropout 0.3 --mode test --batch_size 1 --normalizer_state mimic3models/mortality/ihm_ts1.0.input_str_previous.start_time_zero.normalizer --load_state {model-directory} --data {test dataset-directory}
+```
 
 
+Random forest module training:
+```bash
+python -um mimic3models.mortality.train_mortality
+```
+Random forest module testing and Interpretation:
+```bash
+python -um mimic3models.mortality.run_mortality
+```
 ## Model performance evaluation(AUC)
-Evaluate model performance (AUC, 95% confidence interval, etc.)
-	   python -um mimic3benchmark.evaluation.evaluateAUC
+Evaluate model performance (AUC, 95% confidence interval, etc.).
+```
+python -um mimic3benchmark.evaluation.evaluateAUC
+```
