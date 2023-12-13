@@ -1,0 +1,277 @@
+{
+  "id_to_channel": [
+	"Albumin",
+	"Alkaline phosphate",
+	"Amylase",
+	"Bicarbonate",
+	"Chloride",
+	"Conjugated bilirubin",
+	"Creatine Kinase MB Isoenzyme",
+	"Creatinine",
+	"Creatinine Kinase(CK)",
+	"D-Dimer",
+	"Diastolic blood pressure",
+    "Ferritin",
+	"Folate",
+	"HDL cholesterol",
+	"Heart Rate",
+	"Hematocrit",
+	"Hemoglobin",
+	"Iron",
+	"LDL cholesterol",
+	"Lactate dehydrogenase",
+	"Lactic acid",
+	"Lymphocytes",
+	"Magnesium",
+	"Phosphate",
+	"Potassium",
+	"Prothrombin time",
+	"Red blood cell count",
+	"Respiratory rate",
+	"Sodium",
+	"Stool Color",
+	"Systolic blood pressure",
+    "TCO2",
+    "TG",
+    "Temperature",
+	"Total Iron Binding Capacity",
+    "Total Protein Pleural",
+	"Total bilirubin",
+	"Total calcium",
+	"Total cholesterol",
+	"Total protein",
+	"Triiodothyronine(T3)",
+    "Uric acid",
+    "Vitamin B12"
+  ],
+  "is_categorical_channel": {
+	"Albumin": false,
+	"Alkaline phosphate": false,
+	"Amylase": false,
+	"Bicarbonate": false,
+	"Chloride": false,
+	"Conjugated bilirubin": false,
+	"Creatine Kinase MB Isoenzyme": false,
+	"Creatinine": false,
+	"Creatinine Kinase(CK)": false,
+	"D-Dimer": false,
+	"Diastolic blood pressure": false,
+    "Ferritin": false,
+	"Folate": false,
+	"HDL cholesterol": false,
+	"Heart Rate": false,
+	"Hematocrit": false,
+	"Hemoglobin": false,
+	"Iron": false,
+	"LDL cholesterol": false,
+	"Lactate dehydrogenase": false,
+	"Lactic acid": false,
+	"Lymphocytes": false,
+	"Magnesium": false,
+	"Phosphate": false,
+	"Potassium": false,
+	"Prothrombin time": false,
+	"Red blood cell count": false,
+	"Respiratory rate": false,
+	"Sodium": false,
+	"Stool Color": true,
+	"Systolic blood pressure": false,
+    "TCO2": false,
+    "TG": false,
+    "Temperature": false,
+	"Total Iron Binding Capacity": false,
+    "Total Protein Pleural": false,
+	"Total bilirubin": false,
+	"Total calcium": false,
+	"Total cholesterol": false,
+	"Total protein": false,
+	"Triiodothyronine(T3)": false,
+    "Uric acid": false,
+    "Vitamin B12": false
+  },
+  "possible_values": {
+    "Albumin": [
+
+    ],
+	"Alkaline phosphate": [
+
+    ],
+	"Amylase": [
+
+    ],
+	"Bicarbonate": [
+
+    ],
+	"Chloride": [
+
+    ],
+	"Conjugated bilirubin": [
+
+    ],
+	"Creatine Kinase MB Isoenzyme": [
+
+    ],
+	"Creatinine": [
+
+    ],
+	"Creatinine Kinase(CK)": [
+
+    ],
+	"D-Dimer": [
+
+    ],
+	"Diastolic blood pressure": [
+
+    ],
+    "Ferritin": [
+
+    ],
+	"Folate": [
+
+    ],
+	"HDL cholesterol": [
+
+    ],
+	"Heart Rate": [
+
+    ],
+	"Hematocrit": [
+
+    ],
+	"Hemoglobin": [
+
+    ],
+	"Iron": [
+
+    ],
+	"LDL cholesterol": [
+
+    ],
+	"Lactate dehydrogenase": [
+
+    ],
+	"Lactic acid": [
+
+    ],
+	"Lymphocytes": [
+
+    ],
+	"Magnesium": [
+
+    ],
+	"Phosphate": [
+
+    ],
+	"Potassium": [
+
+    ],
+	"Prothrombin time": [
+
+    ],
+	"Red blood cell count": [
+
+    ],
+	"Respiratory rate": [
+
+    ],
+	"Sodium": [
+
+    ],
+	"Stool Color": [
+      "Black",
+      "Bright Red Blood",
+	  "Brown",
+	  "Clay",
+	  "Clear",
+	  "Golden",
+	  "Green",
+	  "Maroon",
+	  "Melena",
+	  "Other/Remarks"
+    ],
+	"Systolic blood pressure": [
+
+    ],
+    "TCO2": [
+
+    ],
+    "TG": [
+
+    ],
+    "Temperature": [
+
+    ],
+	"Total Iron Binding Capacity": [
+
+    ],
+    "Total Protein Pleural": [
+
+    ],
+	"Total bilirubin": [
+
+    ],
+	"Total calcium": [
+
+    ],
+	"Total cholesterol": [
+
+    ],
+	"Total protein": [
+
+    ],
+	"Triiodothyronine(T3)": [
+
+    ],
+    "Uric acid": [
+
+    ],
+    "Vitamin B12": [
+
+    ]
+  },
+  "normal_values": {
+	"Albumin": "40.0",
+	"Alkaline phosphate": "90",
+	"Amylase": "85",
+	"Bicarbonate": "25",
+	"Chloride": "101",
+	"Conjugated bilirubin": "5.1",
+	"Creatine Kinase MB Isoenzyme": "3",
+	"Creatinine": "79.5",
+	"Creatinine Kinase(CK)": "108",
+	"D-Dimer": "300",
+	"Diastolic blood pressure": "59.0",
+    "Ferritin": "86",
+	"Folate": "9.0",
+	"HDL cholesterol": "1.35",
+	"Heart Rate": "86",
+	"Hematocrit": "0.43",
+	"Hemoglobin": "130",
+	"Iron": "16.2",
+	"LDL cholesterol": "100",
+	"Lactate dehydrogenase": "180",
+	"Lactic acid": "11",
+	"Lymphocytes": "30.0",
+	"Magnesium": "0.83",
+	"Phosphate": "1.2",
+	"Potassium": "4.0",
+	"Prothrombin time": "12.1",
+	"Red blood cell count": "4.5",
+	"Respiratory rate": "19",
+	"Sodium": "141",
+	"Stool Color": "Golden",
+	"Systolic blood pressure": "118.0",
+    "TCO2": "25.0",
+    "TG": "1.1",
+    "Temperature": "36.6",
+	"Total Iron Binding Capacity": "57.6",
+    "Total Protein Pleural": "20",
+	"Total bilirubin": "11.9",
+	"Total calcium": "2.4",
+	"Total cholesterol": "4.4",
+	"Total protein": "70",
+	"Triiodothyronine(T3)": "2.31",
+    "Uric acid": "286",
+    "Vitamin B12": "230" 
+  }
+}
